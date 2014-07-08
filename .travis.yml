@@ -10,9 +10,9 @@ install:
  - composer install
 
 script:
- - vendor/bin/phpcs --standard=PSR1 --report=emacs .
- - vendor/bin/phpcs --standard=PSR2 --report=emacs .
- - vendor/bin/phpcs --standard=PEAR --report=emacs .
+ - vendor/bin/phpcs --extensions=php --standard=PSR1 --report=emacs src unit
+ - vendor/bin/phpcs --extensions=php --standard=PSR2 --report=emacs src unit
+ - vendor/bin/phpcs --extensions=php --standard=PEAR --report=emacs src unit
  - vendor/bin/phpunit unit
 
 notifications:
