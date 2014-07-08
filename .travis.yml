@@ -1,0 +1,21 @@
+language: php
+
+php:
+  - 5.3
+  - 5.4
+  - 5.5
+  - 5.6
+  - hhvm
+
+install:
+ - composer --prefer-source install
+
+script:
+ - vendor/bin/phpcs --standard=PSR1 --report=emacs .
+ - vendor/bin/phpcs --standard=PSR2 --report=emacs .
+ - vendor/bin/phpcs --standard=PEAR --report=emacs .
+ - vendor/bin/phpunit unit
+
+notifications:
+  email:
+    - h-yoshida@mediba.jp
