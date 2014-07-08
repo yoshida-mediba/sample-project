@@ -6,7 +6,8 @@ php:
   - hhvm
 
 install:
- - composer --prefer-source install
+ - composer self-update
+ - composer install
 
 script:
  - vendor/bin/phpcs --standard=PSR1 --report=emacs .
