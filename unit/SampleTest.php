@@ -21,7 +21,7 @@ namespace Unit;
  * @license  Example http://example.com
  * @link     none
  */
-class SampleTest extends PHPUnit_Framework_TestCase
+class SampleTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
