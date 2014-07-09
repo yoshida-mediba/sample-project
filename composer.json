@@ -2,5 +2,6 @@
     "require-dev": {
         "phpunit/phpunit": "*",
         "squizlabs/php_codesniffer": "*"
+        "mockery/mockery": "dev-master"
     }
 }
