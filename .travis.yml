@@ -6,15 +6,18 @@ php:
   - hhvm
 
 install:
- - composer self-update
- - composer install
+  - composer self-update
+  - composer install
 
 script:
- - vendor/bin/phpcs --extensions=php --standard=PSR1 --report=emacs src unit
- - vendor/bin/phpcs --extensions=php --standard=PSR2 --report=emacs src unit
- - vendor/bin/phpcs --extensions=php --standard=PEAR --report=emacs src unit
- - vendor/bin/phpunit unit
+  - vendor/bin/phpcs --extensions=php --standard=PSR1 --report=emacs src unit
+  - vendor/bin/phpcs --extensions=php --standard=PSR2 --report=emacs src unit
+  - vendor/bin/phpcs --extensions=php --standard=PEAR --report=emacs src unit
+  - vendor/bin/phpunit unit
 
 notifications:
   email:
     - h-yoshida@mediba.jp
+  hipchat:
+    rooms:
+      secure: onXsp0t2pr1JMT1Rny6domSeHChUi0SzjX4gRlgYisa01zwJW4WVSx3NvBgCz6O+2bGPddqHbwUKMP4kY8n+fBqOhUe1+ZFvjwmORcgapMcMeWdPM5U9KIH/YTsM+qZVGlyq/kEbpD/Zjrq5YnnxfP0JbhyNqyFE2BnjBykq11A=
