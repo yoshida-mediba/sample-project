@@ -1,25 +1,32 @@
 <?php
-
-$data = array(
-    'hoge' => 'fuga',
-    'hage' => 'faaa',
-);
-
-var_dump($data);
+/**
+ * index.php
+ *
+ * PHP version 5.3
+ *
+ * @category SampleProject
+ * @package  Src
+ * @author   Everyone <username@example.com>
+ * @license  Example http://example.com
+ * @link     none
+ */
+namespace Src;
 
 /**
  * SampleProject
  *
- * @author  Everyone <username@example.com>
- * @license Example http://example.com
- * @link    none
+ * @category SampleProject
+ * @package  Src
+ * @author   Everyone <username@example.com>
+ * @license  Example http://example.com
+ * @link     none
  */
 class SampleProject
 {
     /**
      * __construct
      */
-    function __construct()
+    public function __construct()
     {
         echo '__construct()';
     }
@@ -27,12 +34,8 @@ class SampleProject
     /**
      * __destruct
      */
-    function __destruct()
+    public function __destruct()
     {
         echo '__destruct()';
     }
 }
-
-$sample = new SampleProject();
-
-var_dump($sample);
