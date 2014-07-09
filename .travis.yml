@@ -10,9 +10,9 @@ install:
   - composer install
 
 script:
+  - vendor/bin/phpcs --extensions=php --standard=PEAR --report=emacs src unit
   - vendor/bin/phpcs --extensions=php --standard=PSR1 --report=emacs src unit
   - vendor/bin/phpcs --extensions=php --standard=PSR2 --report=emacs src unit
-  - vendor/bin/phpcs --extensions=php --standard=PEAR --report=emacs src unit
   - vendor/bin/phpunit unit
 
 notifications:
@@ -20,4 +20,4 @@ notifications:
     - h-yoshida@mediba.jp
   hipchat:
     rooms:
-      secure: onXsp0t2pr1JMT1Rny6domSeHChUi0SzjX4gRlgYisa01zwJW4WVSx3NvBgCz6O+2bGPddqHbwUKMP4kY8n+fBqOhUe1+ZFvjwmORcgapMcMeWdPM5U9KIH/YTsM+qZVGlyq/kEbpD/Zjrq5YnnxfP0JbhyNqyFE2BnjBykq11A=
+      secure: hJ9ayDpOyJJIlIbyUV5M1HdLIksJmkTvrKYy70VzOlKMrTr9BOKlwHHQWjioCP+KuTOn4APfbh91EEzoqIVHnWyWlKj5dV9bSbEWiRP07uzEO5C5UJEt/c3b889iQWapMNqNgphh54/wk/yddZQbBhnw3E8pznfXRb52nsiQuvg=
