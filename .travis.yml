@@ -7,9 +7,10 @@ php:
 
 install:
   - composer self-update
-  - composer install
+  - composer install --prefer-source
 
 script:
+  - find . -name "*.php" | xargs -l1 -P8 php -l
   - vendor/bin/phpcs --extensions=php --standard=PEAR --report=emacs src unit
   - vendor/bin/phpcs --extensions=php --standard=PSR1 --report=emacs src unit
   - vendor/bin/phpcs --extensions=php --standard=PSR2 --report=emacs src unit
