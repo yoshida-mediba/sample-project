@@ -38,4 +38,9 @@ class SampleProject
     {
         echo '__destruct()';
     }
+
+    function ok()
+    {
+        echo 'ok';
+    }
 }
