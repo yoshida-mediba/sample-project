@@ -38,4 +38,14 @@ class SampleProject
     {
         echo '__destruct()';
     }
+
+    /**
+     * ok
+     *
+     * @return void
+     */
+    public function ok()
+    {
+        echo 'ok';
+    }
 }
